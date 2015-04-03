@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdvancedIOSUI", "AdvancedIOSUI\AdvancedIOSUI.csproj", "{85851CF0-A28F-4D89-9AB8-12439CC02758}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|iPhoneSimulator = Debug|iPhoneSimulator
+		Release|iPhoneSimulator = Release|iPhoneSimulator
+		Debug|iPhone = Debug|iPhone
+		Release|iPhone = Release|iPhone
+		Ad-Hoc|iPhone = Ad-Hoc|iPhone
+		AppStore|iPhone = AppStore|iPhone
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{85851CF0-A28F-4D89-9AB8-12439CC02758}.Ad-Hoc|iPhone.ActiveCfg = Ad-Hoc|iPhone
+		{85851CF0-A28F-4D89-9AB8-12439CC02758}.Ad-Hoc|iPhone.Build.0 = Ad-Hoc|iPhone
+		{85851CF0-A28F-4D89-9AB8-12439CC02758}.AppStore|iPhone.ActiveCfg = AppStore|iPhone
+		{85851CF0-A28F-4D89-9AB8-12439CC02758}.AppStore|iPhone.Build.0 = AppStore|iPhone
+		{85851CF0-A28F-4D89-9AB8-12439CC02758}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{85851CF0-A28F-4D89-9AB8-12439CC02758}.Debug|iPhone.Build.0 = Debug|iPhone
+		{85851CF0-A28F-4D89-9AB8-12439CC02758}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{85851CF0-A28F-4D89-9AB8-12439CC02758}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{85851CF0-A28F-4D89-9AB8-12439CC02758}.Release|iPhone.ActiveCfg = Release|iPhone
+		{85851CF0-A28F-4D89-9AB8-12439CC02758}.Release|iPhone.Build.0 = Release|iPhone
+		{85851CF0-A28F-4D89-9AB8-12439CC02758}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{85851CF0-A28F-4D89-9AB8-12439CC02758}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = AdvancedIOSUI\AdvancedIOSUI.csproj
+	EndGlobalSection
+EndGlobal
