@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4451" systemVersion="13A461" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="8">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733.0"/>
+    </dependencies>
+    <scenes>
+        <!--class Prefix:identifier View Controller-->
+        <scene sceneID="7">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="8" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="11">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="10" kind="relationship" relationship="rootViewController" id="9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="12" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-28" y="64"/>
+        </scene>
+        <scene sceneID="13">
+            <objects>
+                <viewController id="10" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5"/>
+                        <viewControllerLayoutGuide type="bottom" id="6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="15">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="19" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="79.5" y="105" width="161" height="30"/>
+                                <state key="normal" title="Gesture Rotation">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <constraints>
+                                    <constraint id="21" firstItem="19" firstAttribute="width" constant="161"/>
+                                    <constraint id="22" firstItem="19" firstAttribute="height" constant="30"/>
+                                </constraints>
+                                <connections>
+                                    <segue id="75" destination="34" kind="push"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="24" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="79.5" y="157" width="161" height="30"/>
+                                <state key="normal" title="Drag and Snap">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue id="249" destination="221" kind="push"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="88" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="79.5" y="208" width="161" height="30"/>
+                                <state key="normal" title="Movable Buttons">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue id="160" destination="96" kind="push"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="19" firstAttribute="centerX" secondItem="15" secondAttribute="centerX" constant="0.0" id="20"/>
+                            <constraint firstItem="19" firstAttribute="top" secondItem="5" secondAttribute="bottom" constant="41" id="23"/>
+                            <constraint firstItem="24" firstAttribute="width" secondItem="19" secondAttribute="width" id="27"/>
+                            <constraint firstItem="24" firstAttribute="height" secondItem="19" secondAttribute="height" id="28"/>
+                            <constraint firstItem="24" firstAttribute="centerX" secondItem="15" secondAttribute="centerX" constant="0.0" id="29"/>
+                            <constraint firstItem="24" firstAttribute="top" secondItem="19" secondAttribute="bottom" constant="22" id="30"/>
+                            <constraint firstItem="88" firstAttribute="centerX" secondItem="15" secondAttribute="centerX" constant="0.0" id="89"/>
+                            <constraint firstItem="88" firstAttribute="height" secondItem="19" secondAttribute="height" id="90"/>
+                            <constraint firstItem="88" firstAttribute="width" secondItem="19" secondAttribute="width" id="91"/>
+                            <constraint firstItem="88" firstAttribute="top" secondItem="24" secondAttribute="bottom" constant="21" id="92"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Menu" id="14"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="16" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="506" y="64"/>
+        </scene>
+        <scene sceneID="33">
+            <objects>
+                <viewController id="34" sceneMemberID="viewController" title="Rotation" customClass="RotationViewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="31"/>
+                        <viewControllerLayoutGuide type="bottom" id="32"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="35">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="38" translatesAutoresizingMaskIntoConstraints="NO" image="xamlogo.png">
+                                <rect key="frame" x="85" y="137" width="150" height="134"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Use two fingers to rotate" lineBreakMode="tailTruncation" minimumFontSize="10" id="79" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="65.5" y="354" width="189" height="20.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="38" firstAttribute="top" secondItem="31" secondAttribute="bottom" constant="73" id="77"/>
+                            <constraint firstItem="38" firstAttribute="centerX" secondItem="35" secondAttribute="centerX" constant="0.0" id="78"/>
+                            <constraint firstItem="79" firstAttribute="centerX" secondItem="35" secondAttribute="centerX" constant="0.0" id="80"/>
+                            <constraint firstItem="79" firstAttribute="top" secondItem="38" secondAttribute="bottom" constant="83" id="81"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imgLogo" destination="38" id="name-outlet-38"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="36" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="523" y="726"/>
+        </scene>
+        <scene sceneID="95">
+            <objects>
+                <viewController id="96" sceneMemberID="viewController" title="Movable Buttons" customClass="ButtonMoveViewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="93"/>
+                        <viewControllerLayoutGuide type="bottom" id="94"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="97">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="178">
+                                <rect key="frame" x="135.5" y="517" width="51" height="31"/>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="183" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="37" y="89" width="106" height="30"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0" green="1" blue="1" alpha="1"/>
+                                <state key="normal" title="Fade">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="184" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="37" y="141" width="106" height="30"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0" green="1" blue="0" alpha="1"/>
+                                <state key="normal" title="Shake">
+                                    <color key="titleShadowColor" colorSpace="calibratedRGB" red="0" green="1" blue="0" alpha="1"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="185" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="37" y="193" width="106" height="30"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="1" green="0" blue="1" alpha="1"/>
+                                <state key="normal" title="Swell">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" minimumFontSize="10" id="208" translatesAutoresizingMaskIntoConstraints="NO" text="Toggle to move buttons">
+                                <rect key="frame" x="69.5" y="482.5" width="181" height="20.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="178" firstAttribute="centerX" secondItem="97" secondAttribute="centerX" constant="0.0" id="179"/>
+                            <constraint firstItem="97" firstAttribute="bottom" secondItem="178" secondAttribute="bottom" constant="20" id="180"/>
+                            <constraint firstItem="208" firstAttribute="centerX" secondItem="97" secondAttribute="centerX" constant="0.0" id="209"/>
+                            <constraint firstItem="208" firstAttribute="centerX" secondItem="97" secondAttribute="centerX" constant="0.0" id="210"/>
+                            <constraint firstItem="178" firstAttribute="top" secondItem="208" secondAttribute="bottom" constant="14" id="211"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="swMoveable" destination="178" id="name-outlet-178"/>
+                        <outlet property="switchMovable" destination="97" id="name-outlet-97"/>
+                        <outlet property="btnFade" destination="183" id="name-outlet-183"/>
+                        <outlet property="btnShake" destination="184" id="name-outlet-184"/>
+                        <outlet property="btnSwell" destination="185" id="name-outlet-185"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="98" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="983" y="757"/>
+        </scene>
+        <scene sceneID="220">
+            <objects>
+                <viewController id="221" sceneMemberID="viewController" customClass="DragSnapViewController" title="Drag and Snap">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="218"/>
+                        <viewControllerLayoutGuide type="bottom" id="219"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="222">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="251" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="20" y="84" width="128.5" height="125.5"/>
+                                <color key="backgroundColor" customColorSpace="calibratedWhite" colorSpace="calibratedRGB" red="0.9137254901960784" green="0.984313725490196" blue="1" alpha="1"/>
+                                <constraints>
+                                    <constraint id="252" firstAttribute="width" secondItem="251" secondAttribute="height" constant="0.0" multiplier="40:39"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" id="255" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="168.5" y="84" width="131.5" height="125.5"/>
+                                <color key="backgroundColor" customColorSpace="calibratedWhite" colorSpace="calibratedRGB" red="0.89411764705882357" green="0.98039215686274506" blue="1" alpha="1"/>
+                                <constraints>
+                                    <constraint id="256" firstAttribute="width" secondItem="255" secondAttribute="height" constant="0.0" multiplier="153:146"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="261" translatesAutoresizingMaskIntoConstraints="NO" image="xamlogo.png" fixedFrame="YES">
+                                <rect key="frame" x="85" y="230" width="150" height="134"/>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="251" firstAttribute="leading" secondItem="222" secondAttribute="leading" constant="20" id="253"/>
+                            <constraint firstItem="251" firstAttribute="top" secondItem="218" secondAttribute="bottom" constant="20" id="254"/>
+                            <constraint firstItem="255" firstAttribute="height" secondItem="251" secondAttribute="height" id="257"/>
+                            <constraint firstItem="251" firstAttribute="trailing" secondItem="255" secondAttribute="leading" constant="-20" id="258"/>
+                            <constraint firstItem="222" firstAttribute="trailing" secondItem="255" secondAttribute="trailing" constant="20" id="259"/>
+                            <constraint firstItem="255" firstAttribute="top" secondItem="251" secondAttribute="top" constant="0.0" id="260"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imgLogo" destination="261" id="name-outlet-261"/>
+                        <outlet property="boxOne" destination="251" id="name-outlet-251"/>
+                        <outlet property="boxTwo" destination="255" id="name-outlet-255"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="223" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1070" y="77"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+    <resources>
+        <image name="xamlogo.png" width="150" height="134"/>
+    </resources>
+</document>
