@@ -122,6 +122,10 @@
     <Compile Include="ViewControllers\DragSnapViewController.designer.cs">
       <DependentUpon>DragSnapViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewControllers\MultiGestureViewController.cs" />
+    <Compile Include="ViewControllers\MultiGestureViewController.designer.cs">
+      <DependentUpon>MultiGestureViewController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>

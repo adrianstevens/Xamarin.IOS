@@ -62,6 +62,18 @@
                                     <segue id="160" destination="96" kind="push"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="283" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="79.5" y="261" width="161" height="30"/>
+                                <state key="normal" title="Multi-Gesture">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue id="331" destination="270" kind="push"/>
+                                </connections>
+                                <constraints>
+                                    <constraint id="288" firstItem="283" firstAttribute="width" constant="161"/>
+                                </constraints>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="19" firstAttribute="centerX" secondItem="15" secondAttribute="centerX" constant="0.0" id="20"/>
@@ -74,6 +86,8 @@
                             <constraint firstItem="88" firstAttribute="height" secondItem="19" secondAttribute="height" id="90"/>
                             <constraint firstItem="88" firstAttribute="width" secondItem="19" secondAttribute="width" id="91"/>
                             <constraint firstItem="88" firstAttribute="top" secondItem="24" secondAttribute="bottom" constant="21" id="92"/>
+                            <constraint firstItem="283" firstAttribute="centerX" secondItem="15" secondAttribute="centerX" constant="0.0" id="286"/>
+                            <constraint firstItem="283" firstAttribute="top" secondItem="88" secondAttribute="bottom" constant="23" id="287"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Menu" id="14"/>
@@ -232,6 +246,44 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="223" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1070" y="77"/>
+        </scene>
+        <scene sceneID="269">
+            <objects>
+                <viewController id="270" sceneMemberID="viewController" customClass="MultiGestureViewController" title="Multi-Gesture">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="279"/>
+                        <viewControllerLayoutGuide type="bottom" id="280"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="273">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="272" translatesAutoresizingMaskIntoConstraints="NO" image="xamlogo.png">
+                                <rect key="frame" x="85" y="130" width="150" height="134"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Pinch or Rotate" lineBreakMode="tailTruncation" minimumFontSize="10" id="392" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="100.5" y="304" width="119.5" height="20.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="272" firstAttribute="centerX" secondItem="273" secondAttribute="centerX" constant="0.0" id="388"/>
+                            <constraint firstItem="272" firstAttribute="top" secondItem="273" secondAttribute="top" constant="130" id="389"/>
+                            <constraint firstItem="392" firstAttribute="centerX" secondItem="273" secondAttribute="centerX" constant="0.0" id="393"/>
+                            <constraint firstItem="392" firstAttribute="top" secondItem="272" secondAttribute="bottom" constant="40" id="394"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imgLogo" destination="272" id="271"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="281" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1443" y="734"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

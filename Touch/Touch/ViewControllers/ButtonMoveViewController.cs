@@ -83,14 +83,12 @@ namespace Touch
 
 		void BtnShake_TouchUpInside (object sender, EventArgs e)
 		{
-			btnShake.Enabled = false;
-
 			UIView.Animate (0.25, () => btnShake.Transform = CGAffineTransform.MakeTranslation(10, 0),
 				() => {
 					UIView.Animate (0.25, () => btnShake.Transform = CGAffineTransform.MakeTranslation(-10, 0),
 						()=> {  
 							UIView.Animate (0.25, () => btnShake.Transform = CGAffineTransform.MakeTranslation(0, 0),
-								()=> { btnShake.Enabled = true; });
+								()=> {  });
 						});
 				}
 			);
@@ -98,24 +96,20 @@ namespace Touch
 
 		void BtnSwell_TouchUpInside (object sender, EventArgs e)
 		{
-			btnSwell.Enabled = false;
-
 			UIView.Animate (0.5, () => btnSwell.Transform = CGAffineTransform.MakeScale(1.5f, 1.5f),
 				() => {
 					UIView.Animate (0.25, () => btnSwell.Transform = CGAffineTransform.MakeScale(1, 1),
-						()=> { btnSwell.Enabled = true; });
+						()=> {  });
 				}
 			);
 		}
 
 		void BtnFade_TouchUpInside (object sender, EventArgs e)
 		{
-			btnFade.Enabled = false;
-
 			UIView.Animate (1, () => btnFade.Alpha = 0,
 				() => {
 					UIView.Animate (1, () => btnFade.Alpha = 1,
-						()=> { btnFade.Enabled = true; });
+						()=> {  });
 				}
 			);
 		}		

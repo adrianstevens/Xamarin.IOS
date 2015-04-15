@@ -3,6 +3,7 @@ using System;
 using System.CodeDom.Compiler;
 using UIKit;
 using CoreGraphics;
+using System.Diagnostics;
 
 namespace Touch
 {
@@ -18,6 +19,14 @@ namespace Touch
 
 			var rotationGesture = new UIRotationGestureRecognizer (HandleRotation);
 			this.View.AddGestureRecognizer (rotationGesture);
+
+			var doubleTapGesture = new UITapGestureRecognizer ();
+			doubleTapGesture.NumberOfTapsRequired = 2;
+			doubleTapGesture.AddTarget (() => {
+				Debug.WriteLine("double tap");
+			});
+
+			imgLogo.AddGestureRecognizer (doubleTapGesture);
 		}
 
 		void HandleRotation(UIRotationGestureRecognizer gesture)

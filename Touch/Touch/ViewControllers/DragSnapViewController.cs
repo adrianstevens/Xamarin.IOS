@@ -94,10 +94,6 @@ namespace Touch
 				});
 				
 			}
-				
-
-
-
 
 			imageIsMoving = false;
 		}
