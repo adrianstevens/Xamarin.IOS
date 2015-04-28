@@ -68,6 +68,8 @@ namespace Touch
 			// get the touch
 			var touch = touches.AnyObject as UITouch;
 
+			touch.MajorRadius;
+
 			if (touch == null || imageIsMoving == false) 
 				return;
 
@@ -92,9 +94,7 @@ namespace Touch
 					imgLogo.Center = this.View.Center;
 					imgLogo.Transform = CGAffineTransform.MakeScale (1, 1);
 				});
-				
 			}
-
 			imageIsMoving = false;
 		}
 
