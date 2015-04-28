@@ -1,1 +1,15 @@
-﻿<Properties StartupItem="Touch/Touch.csproj" />
+﻿<Properties StartupItem="Touch/Touch.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone6.8.3" />
+  <MonoDevelop.Ide.Workbench>
+    <Files>
+      <File FileName="Touch/ViewControllers/MultiGestureViewController.cs" Line="13" Column="3" />
+      <File FileName="Touch/ViewControllers/DragSnapViewController.cs" Line="71" Column="4" />
+      <File FileName="Touch/ViewControllers/ButtonMoveViewController.cs" Line="130" Column="3" />
+      <File FileName="Touch/ViewControllers/TouchViewController.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
