@@ -9,6 +9,7 @@ using MessageUI;
 using System.Drawing;
 using System.IO;
 using CoreAnimation;
+using CoreGraphics;
 
 namespace MapSnap
 {
@@ -49,7 +50,7 @@ namespace MapSnap
 
 		async partial void BtnCapture_TouchUpInside (UIButton sender)
 		{
-			imgCapture.Image = (await GetSnapshotAsync(GetSnapshotOptions())).Image;
+			imgCapture.Image = DrawAnnotation( (await GetSnapshotAsync(GetSnapshotOptions())).Image);
 		}
 
 		Task<MKMapSnapshot> GetSnapshotAsync (MKMapSnapshotOptions options)
@@ -63,6 +64,24 @@ namespace MapSnap
 			});
 
 			return tcs.Task;
+		}
+
+		UIImage DrawAnnotation (UIImage image)
+		{
+			var pin = new MKPinAnnotationView (null, "pin");
+
+			UIGraphics.BeginImageContextWithOptions (image.Size, true, image.CurrentScale);
+
+			var center = new CGPoint (image.Size.Width / 2 - pin.CenterOffset.X, image.Size.Height /2 + pin.CenterOffset.Y);
+
+			image.Draw(new CGPoint(0,0));
+			pin.Image.Draw (center);
+
+			var compositeImage = UIGraphics.GetImageFromCurrentImageContext ();
+
+			UIGraphics.EndImageContext ();
+
+			return compositeImage;
 		}
 
 		MFMailComposeViewController mailVC = new MFMailComposeViewController();
