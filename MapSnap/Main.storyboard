@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="3" translatesAutoresizingMaskIntoConstraints="NO" showsUserLocation="YES">
+                                <rect key="frame" x="0.0" y="40" width="600" height="280"/>
+                                <constraints>
+                                    <constraint id="28" firstItem="3" firstAttribute="height" constant="2024" relation="lessThanOrEqual"/>
+                                </constraints>
+                            </mapView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="18" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="0.0" y="340" width="600" height="260"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="15" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="480" y="550" width="100" height="30"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0" green="1" blue="0" alpha="1"/>
+                                <state key="normal" title="E-mail">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="BtnEmail_TouchUpInside:" destination="BYZ-38-t0r" id="16" eventType="touchUpInside"/>
+                                </connections>
+                                <constraints>
+                                    <constraint id="48" firstItem="15" firstAttribute="width" constant="100"/>
+                                </constraints>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="37" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="20" y="550" width="100" height="30"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0" green="1" blue="1" alpha="1"/>
+                                <state key="normal" title="Capture">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="BtnCapture_TouchUpInside:" destination="BYZ-38-t0r" id="38" eventType="touchUpInside"/>
+                                </connections>
+                                <constraints>
+                                    <constraint id="43" firstItem="37" firstAttribute="width" constant="100"/>
+                                </constraints>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Set location:" lineBreakMode="tailTruncation" minimumFontSize="10" id="96" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="20" y="20" width="95.5" height="20.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Preview:" lineBreakMode="tailTruncation" minimumFontSize="10" id="101" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="20" y="320.5" width="65" height="20.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint id="29" firstItem="3" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="40"/>
+                            <constraint id="30" firstItem="3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading"/>
+                            <constraint id="31" firstItem="3" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing"/>
+                            <constraint id="32" firstItem="18" firstAttribute="top" secondItem="3" secondAttribute="bottom" constant="40"/>
+                            <constraint id="33" firstItem="18" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading"/>
+                            <constraint id="34" firstItem="18" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom"/>
+                            <constraint id="35" firstItem="18" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing"/>
+                            <constraint id="36" firstItem="18" firstAttribute="height" secondItem="3" secondAttribute="height"/>
+                            <constraint id="41" firstItem="37" firstAttribute="leading" secondItem="18" secondAttribute="leading" constant="20"/>
+                            <constraint id="42" firstItem="18" firstAttribute="bottom" secondItem="37" secondAttribute="bottom" constant="20"/>
+                            <constraint id="47" firstItem="18" firstAttribute="trailing" secondItem="15" secondAttribute="trailing" constant="20"/>
+                            <constraint id="49" firstItem="18" firstAttribute="bottom" secondItem="15" secondAttribute="bottom" constant="20"/>
+                            <constraint id="97" firstItem="96" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20"/>
+                            <constraint id="98" firstItem="96" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20"/>
+                            <constraint id="102" firstItem="101" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20"/>
+                            <constraint id="103" firstItem="101" firstAttribute="bottom" secondItem="18" secondAttribute="top" constant="1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="map" destination="3" id="name-outlet-3"/>
+                        <outlet property="btnEmail" destination="15" id="name-outlet-15"/>
+                        <outlet property="btnCapture" destination="37" id="name-outlet-37"/>
+                        <outlet property="imgCapture" destination="18" id="name-outlet-18"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+    </scenes>
+</document>
