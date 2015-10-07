@@ -4,6 +4,8 @@ using System.Linq;
 
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
+using Xamarin;
+using System.Diagnostics;
 
 namespace XamDraw
 {
@@ -19,7 +21,14 @@ namespace XamDraw
 			get;
 			set;
 		}
-		
+
+		public override void FinishedLaunching (UIApplication application)
+		{
+			#if DEBUG
+			Calabash.Start();
+			#endif 
+		}
+
 		// This method is invoked when the application is about to move from active to inactive state.
 		// OpenGL applications should use this method to pause.
 		public override void OnResignActivation (UIApplication application)
@@ -41,6 +50,13 @@ namespace XamDraw
 		// This method is called when the application is about to terminate. Save data, if needed.
 		public override void WillTerminate (UIApplication application)
 		{
+		}
+
+		[Export ("UITestInvoke:")]
+		public void UITestInvoke (string param)
+		{
+			var alert = new UIAlertView ("test", "invoke", null, "ok", null);
+			alert.Show ();
 		}
 	}
 }

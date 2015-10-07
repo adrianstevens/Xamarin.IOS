@@ -55,7 +55,6 @@ namespace XamDraw
 			return -1;
 		}
 
-
 		public override void TouchesBegan (NSSet touches, UIEvent evt)
 		{
 			foreach (UITouch touch in touches) 
